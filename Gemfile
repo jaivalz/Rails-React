@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.0'
 
   gem 'foundation-rails'
 
+  gem 'react-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
