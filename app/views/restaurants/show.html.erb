@@ -10,7 +10,9 @@
    <div class="columns medium-6">
     <p>
         <h4>Comments</h4>
-     <%= react_component('Comment', {author: 'JL', body: 'Great restaurant', rank: 5 }) %>
+           <% @comments.each do |comment| %>
+             <%= react_component('CommentList', {comments: raw(render(template: 'comments/index.json.jbuilder')) }) %>
+           <% end %>
      </p>
   </div>
 </div>
