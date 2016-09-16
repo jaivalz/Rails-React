@@ -25,7 +25,7 @@ var Store = new _.extend({}, EventEmitter.prototype, {
                         
   emitChange: function() {
     this.emit(Constants.CHANGE_EVENT);
-  };
+  }
 
                          
 });
@@ -37,9 +37,20 @@ AppDispatcher.register(function(payload) {
   switch(action) {
     case Constants.ADD_COMMENT:
       Store.addComment(payload.comment);
+      Store.emitChange();
       break;
     default:
      // NO-OP   
   }
   
+});
+
+// Actions
+var Actions = new _.extend({}, {
+  addComment: function(params) {
+    AppDispatcher.dispatch({
+      actionType: Constants.ADD_COMMENT,
+      comment: params
+    });
+  }
 });

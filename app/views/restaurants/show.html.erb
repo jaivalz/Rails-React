@@ -11,7 +11,7 @@
     <p>
         <h4>Comments</h4>
            <% @comments.each do |comment| %>
-             <%= react_component('CommentList', {comments: raw(render(template: 'comments/index.json.jbuilder')) }) %>
+             <%= react_component('CommentList') %>
            <% end %>
      </p>
   </div>
