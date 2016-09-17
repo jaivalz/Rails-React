@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.0'
 
   gem 'lodash-rails'
 
+  gem 'sprockets-es6'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
